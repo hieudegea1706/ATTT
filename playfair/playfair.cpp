@@ -117,3 +117,19 @@ public:
         return cipher;
     }
 };
+
+int main() {
+    string key = "crypto";  // Có thể đổi key được ạ
+    string plaintext = "do you like to study on a crypto grabphy course";
+
+    Playfair pf(key);
+
+    pf.printMatrix();
+
+    string cipher = pf.encrypt(plaintext);
+
+    cout << "\nPlaintext: " << plaintext << endl;
+    cout << "Ciphertext: " << cipher << endl;
+
+    return 0;
+}
