@@ -2,7 +2,7 @@
 
 #define MOD 0x409   // x^10 + x^3 + 1 = 10000001001 = 1033
 
-// tìm bậc đa thức
+
 int degree(int a)
 {
     int deg = -1;
@@ -14,7 +14,6 @@ int degree(int a)
     return deg;
 }
 
-// phép chia đa thức trong GF(2)
 int poly_div(int a, int b, int *rem)
 {
     int da = degree(a);
@@ -35,7 +34,7 @@ int poly_div(int a, int b, int *rem)
     return q;
 }
 
-// Euclidean mở rộng
+
 int inverse(int a)
 {
     int r0 = MOD;
@@ -55,7 +54,6 @@ int inverse(int a)
         printf("q = %d\n", q);
         printf("r = %d\n\n", r);
 
-        int temp = r0;
         r0 = r1;
         r1 = r;
 
